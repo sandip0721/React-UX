@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar'
+import Dashboard1 from "./components/Dashboard1"
+import Dashboard2 from "./components/Dashboard2"
+import { Typography } from '@material-ui/core';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='NavBar'>
+        <Navbar />
+      </div>
+
+      <div className='left-panel'>
+        <div className='col1'>
+          <Typography className='head'>
+            Patients
+          </Typography>
+          <Dashboard1 />
+        </div>
+        <div className='col2'> <Dashboard2 /> </div>
+      </div>
     </div>
   );
 }
